@@ -1,17 +1,7 @@
 services:
-    app.menu:
-        class: AppBundle\Menu\Builder
+    app.exception_listener:
+        class: AppBundle\EventListener\ExceptionListener
         arguments:
-            - '@router'
-            - '@service_container'
-
-    app.main_menu:
-        class: Knp\Menu\MenuItem
-        factory:
-            - '@app.menu'
-            - mainMenu
-        arguments:
-            - '@knp_menu.factory'
-            - []
+            - '@kernel'
         tags:
-            - { name: knp_menu.menu, alias: app_main_menu }
+            - { name: kernel.event_listener, event: kernel.exception }
