@@ -23,5 +23,8 @@ matrix:
           env: deps=low
     fast_finish: true
 
+before_install:
+  - mysql -e "create database IF NOT EXISTS symfony;" -uroot
+
 install:
     - composer update --prefer-dist
