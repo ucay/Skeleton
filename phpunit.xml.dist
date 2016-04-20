@@ -11,12 +11,6 @@
         <ini name="error_reporting" value="-1" />
     </php>
 
-    <testsuites>
-        <testsuite name="Project Test Suite">
-            <directory>tests</directory>
-        </testsuite>
-    </testsuites>
-
     <php>
         <server name="KERNEL_DIR" value="app/" />
     </php>
