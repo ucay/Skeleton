@@ -10,6 +10,9 @@ env:
         - MIN_PHP=5.5.9
         - SYMFONY_PROCESS_PHP_TEST_BINARY=~/.phpenv/versions/5.6/bin/php
 
+services:
+    - mysql
+
 matrix:
     include:
         - php: hhvm
